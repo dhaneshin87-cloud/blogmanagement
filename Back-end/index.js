@@ -24,7 +24,7 @@ app.use(cors());
 
 // OR safer option – allow specific frontend URL
 app.use(cors({
-  origin: "http://localhost:3000",  // your frontend URL
+  origin: "https://blogmanagement-7rqi.vercel.app",  // your frontend URL
   credentials: true
 }));
 
