@@ -1,4 +1,6 @@
 // Create User Page (Admin Only)
+"use client";
+
 import { useState } from 'react';
 import { useAuth } from '../../../components/../contexts/AuthContext';
 import { useRouter } from 'next/navigation';

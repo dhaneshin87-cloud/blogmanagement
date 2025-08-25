@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Blog Application",
-  description: "A modern blog application with user authentication and blog management",
+  description:
+    "A modern blog application with user authentication and blog management",
 };
 
 export default function RootLayout({ children }) {
@@ -26,9 +27,7 @@ export default function RootLayout({ children }) {
       >
         <AuthProvider>
           <Navigation />
-          <main className="min-h-screen">
-            {children}
-          </main>
+          <main className="min-h-screen">{children}</main>
         </AuthProvider>
       </body>
     </html>
