@@ -12,7 +12,7 @@ import { User, Profile, Post } from "./models/index.js";
 import cors from "cors";
 
 const app = express();
-
+const PORT = process.env.PORT || 5000;
 // Add timeout middleware to prevent hanging requests
 app.use((req, res, next) => {
   req.setTimeout(30000); // 30 seconds timeout
@@ -50,8 +50,8 @@ async function startServer() {
     app.use("/api/user", userRoutes);
     app.use("/api/blog", postRoutes);
 
-    const PORT = config.server.port;
-    
+    const PORT = config.server.port || 5000;
+
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
