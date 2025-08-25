@@ -21,7 +21,7 @@ const authController = {
       const user = await User.create({
         name,
         email,
-        password: hashedPassword,
+        password: password,
         role: assignedRole,
       });
 
