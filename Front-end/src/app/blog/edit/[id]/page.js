@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { API_ENDPOINTS } from '../../../../config/api';
 import { useAuth } from '../../../../contexts/AuthContext';
-import { NotificationContext } from '../../../../app/layout';
+
 
 export default function EditBlogPost() {
   const [title, setTitle] = useState('');
@@ -14,7 +14,7 @@ export default function EditBlogPost() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [post, setPost] = useState(null);
-  const { showMessage } = useContext(NotificationContext);
+  const { showMessage } = useContext();
 
   const params = useParams();
   const router = useRouter();
